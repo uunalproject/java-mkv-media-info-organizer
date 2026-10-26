@@ -1,0 +1,24 @@
+Ekleme tamam. Özet:
+
+Yeni: TmdbLink yardımcı sınıfı
+
+src/main/java/com/movieorganizer/tmdb/TmdbLink.java
+- slugify(title) — küçük harf (Locale.ROOT), aksan temizliği, alfanumerik olmayanlar tek -, baş/son - atılır
+- idPart(id, title) → 3021-1408 (başlık boşsa sadece 3021)
+- fileName(type, id, title) → movie_3021-1408.tmdb
+- webUrl(type, id, title) → https://www.themoviedb.org/movie/3021-1408
+
+FileOrganizer değişikliği
+
+- Yeni writeTmdbLinkFile(folder, type, id, title) metodu: poster ile aynı dizine <tür>_<id>-<slug>.tmdb dosyasını yazar, içeriğine TMDB web sayfası URL'ini koyar (UTF-8, dosya varsa atlar, hata olursa sadece uyarı loglar — akışı bozmaz).
+- organizeMovie → klasör oluşturulduktan sonra writeTmdbLinkFile(movieFolder, "movie", tmdb.getId(), tmdb.getTitle())
+- organizeTvShow → writeTmdbLinkFile(showFolder, "tv", tmdb.getId(), tmdb.getName())
+
+Testler
+
+src/test/java/com/movieorganizer/tmdb/TmdbLinkTest.java — 1408 örneği, çok kelimeli/aksan/noktalama, boş başlık → id-only, dizi örneği, ve Türkçe locale bağımsızlığı (TITANIC → titanic, I→ı hatası olmasın diye).
+
+Notlar
+
+- Slug başlıktan türetiliyor; TMDB gerçek slug'ı bazen farklı olabilir (ı→i gibi), ama TMDB sayfayı sayısal id ile çözdüğü için bağlantı her durumda doğru sayfaya gidiyor. Bunu sınıf Javadoc'una ve readMe.md'ye (madde 7) yazdım.
+- Bu makinede mvn ve Eclipse dışında JDK 11 olmadığı için tam Maven derlemesini çalıştıramadım; slug mantığını JDK 8 ile ayrı bir dosyada çalıştırıp doğruladım. Derleme/test'i Eclipse veya mvn test ile çalıştırman gerekiyor.

@@ -1,0 +1,12 @@
+com\movieorganizer\model\TvShowFile.class
+com\movieorganizer\tmdb\TmdbClient.class
+com\movieorganizer\util\MediaNaming.class
+com\movieorganizer\organizer\FileOrganizer.class
+com\movieorganizer\model\MediaFile.class
+com\movieorganizer\tmdb\TmdbLink.class
+com\movieorganizer\util\ColorConsoleFormatter.class
+com\movieorganizer\parser\FileNameParser.class
+com\movieorganizer\model\MovieFile.class
+com\movieorganizer\Main.class
+com\movieorganizer\tmdb\TmdbMovieResult.class
+com\movieorganizer\tmdb\TmdbTvResult.class

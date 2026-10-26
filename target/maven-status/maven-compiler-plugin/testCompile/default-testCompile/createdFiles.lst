@@ -1,0 +1,3 @@
+com\movieorganizer\parser\FileNameParserTest.class
+com\movieorganizer\util\MediaNamingTest.class
+com\movieorganizer\tmdb\TmdbLinkTest.class

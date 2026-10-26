@@ -1,0 +1,12 @@
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\Main.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\model\MediaFile.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\model\MovieFile.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\model\TvShowFile.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\organizer\FileOrganizer.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\parser\FileNameParser.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\tmdb\TmdbClient.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\tmdb\TmdbLink.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\tmdb\TmdbMovieResult.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\tmdb\TmdbTvResult.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\util\ColorConsoleFormatter.java
+C:\DEV\movieOrganizer_v5\src\main\java\com\movieorganizer\util\MediaNaming.java
